@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    
+    <style>
+        body{
+    background-color: orangered;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    display:flex;
+    justify-content: center;
+}
+.head{
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+}
+#result{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="head">Fizzbuzz Game</div>
+    <div class="container">
+    <input type="text" id="num">
+    <button id="btn" onclick="fizzbuzz()">Click</button>
+    </div>
+    <p id="result"></p>
+    
+    <script>
+        let res = document.getElementById('result');
+function fizzbuzz(){
+    let input = document.getElementById('num').value
+ for(let i=1;i<=input;i++){
+     if(i%3==0 && i%5==0){
+         res.innerHTML =("<br/> FizzBuzz");
+     }
+     else if(i%3==0){
+         res.innerHTML =("Fizz");
+     }
+     else if(i%5 ==0){
+         res.innerHTML = ("Buzz");
+     }
+     else{
+         res.innerHTML =(i);
+     }
+ }
+}
+    </script>
+</body>
+</html>
